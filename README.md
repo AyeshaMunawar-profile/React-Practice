@@ -1,30 +1,4 @@
-# NOTES : 
-## WHAT IS REDUX
-Redux is a state mangement library that makes the app more scalable by taking the complex state maanagement logic for each component in react and make it more managable , predictable with out breaking the unidirectional flow of data 
-
-The basic problems that redux solves besides making the project scalable and predictable are :
-1) Props Drilling 
-2) State Lifting 
-
-## REDUX PARTS 
-Basic parts of redux are :
-1) Actions (Things that component is going to call in order to change state component dispatch an action)
-2) Reducer (The things that edit the state action triggers a reducer)
-3) State (Storage of states)
-   
-## Pattern / File structure for the project 
-I am going to use ducks pattern for this project for stroing redux files . All actions reducers and states in one file 
-
-### Install redux : 
-1) <npm i redux>
-2) Add a <Provider> componenent as a wrapper in index.js
-3) Create a configure store file in redux and ducks foler for all the individual ducks (rememeber we are usinf ducks pattern for the project)
-4) In configure store (passed as a prop in provider) take all the ducks and all the middleware we apply to reduc and add that to store 
-5) create a store there and combine reducers there pass the store fromthis file to the provider 
-6) Create a reducer a reducer is a duck in this project 
-7) Create a duck a js file / reducer for the store create a initial state in the reducer 
 # Getting Started with Create React App
-
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
