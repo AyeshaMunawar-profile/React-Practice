@@ -20,12 +20,12 @@ const PostItem = ({postNo, id, title: postTitle, body: postBody, userId}: postPr
     return (
         <>
 
-            <div key={`facebook-post-${postNo}-${id}`} style={postStyling}>
-                <h4 key={`facebook-post-No-${postNo}-${id}`}>Post No : {postNo}</h4>
-                <h5 key={`facebook-post-Id-${postNo}-${id}`}>ID : {id}</h5>
-                <h5 key={`facebook-post-userId-${postNo}-${id}`} style={{marginBottom:"30px"}}>User Id : {userId}</h5>
-                <h5 key={`facebook-post-title-${postNo}-${id}`} style={{color:"FireBrick"}}>Title : {postTitle}</h5>
-                <h5 key={`facebook-post-postBody-${postNo}-${id}`} style={{color:"SlateGrey"}}>Post : {postBody}</h5>
+            <div style={postStyling}>
+                <h4>Post No : {postNo}</h4>
+                <h5>ID : {id}</h5>
+                <h5 style={{marginBottom: "30px"}}>User Id : {userId}</h5>
+                <h5 style={{color: "FireBrick"}}>Title : {postTitle}</h5>
+                <h5 style={{color: "SlateGrey"}}>Post : {postBody}</h5>
             </div>
 
         </>
