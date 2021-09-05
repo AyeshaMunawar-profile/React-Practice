@@ -1,8 +1,14 @@
 # NOTES:
 ## Basics
-1) Package-lock.json stores all the versions of the dependencies and sub dependensies so if you want to install latest version of the dependensies following the rules set in package.json delete the package-lock.json and run `npm install` again 
+1) _**Package-lock.json**_ stores all the versions of the dependencies and sub dependencies so if you want to install the latest version of the dependencies following the rules set in package.json delete the package-lock.json and run `npm install` again 
 2) If you run npm install without package-lock-json it will update the version to the latest compatable version but of you have package-lock.json it will lock it to that version 
+3) Whenever you return a component _**there should be always one top level element in the component**_ so wrap all the jsx elements inside one tag i.e. div or react fragment so that not more than one element is competing to be the top level element of the component 
+4) `React.Fragment` is wrapping tag with no style it is a professional practice to wrap all the jsx element inside a react fragment tag `<> </>` . I t alows us to group multiple children elements without adding extra node to the **DOM**
+5) `React Hooks` are a way of adding dynamic functionality to a React component you don't change the DOM directly now you let the React handle it through virtual DOM . A function that gets triggered during the lifecycle of a React component and can be used to alter the value of the variable or a state 
    
+
+
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
