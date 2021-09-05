@@ -5,8 +5,11 @@
 3) Whenever you return a component _**there should be always one top level element in the component**_ so wrap all the jsx elements inside one tag i.e. div or react fragment so that not more than one element is competing to be the top level element of the component 
 4) `React.Fragment` is wrapping tag with no style it is a professional practice to wrap all the jsx element inside a react fragment tag `<> </>` . I t alows us to group multiple children elements without adding extra node to the **DOM**
 5) `React Hooks` are a way of adding dynamic functionality to a React component you don't change the DOM directly now you let the React handle it through virtual DOM . A function that gets triggered during the lifecycle of a React component and can be used to alter the value of the variable or a state 
+6) Don't directly call setState method in the onclick it will result in a render loop give a reference to a function donot call it there eg. `onClick ={HandleIncrement}` not `onClick ={HandleIncrement()}`. Either create an arrow function or reference a function created somewhere else i.e. give address ot it not call it 
    
-
+## Props
+ 1) Prop is a variable that a component can pass to its children components 
+ 2) 
 
 
 # Getting Started with Create React App
