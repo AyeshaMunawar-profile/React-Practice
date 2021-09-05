@@ -19,7 +19,7 @@ const Posts = ({appName}: postPropsType) => {
                     <h1 style={{margin: "80px 20px"}}> Past Posts on {appName} </h1>
                     {posts && posts.map((post, index) => {
                         return (
-                            <PostItem {...post} postNo={index} />
+                            <PostItem {...post} postNo={index} key={`facebook-post-${index}`}/>
                         )
                     })}
                 </> : <h1>Loading ...</h1>}
