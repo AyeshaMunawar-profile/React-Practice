@@ -1,4 +1,4 @@
-import {useEffect, useState} from "react";
+import React, {useEffect, useState} from "react";
 
 const Counter = () => {
     // Styling
@@ -28,7 +28,9 @@ const Counter = () => {
         borderStyle: "outset",
         borderColor: "-internal-light-dark(rgb(133, 133, 133), rgb(150, 150, 150))",
         borderImage: "initial",
-        color: "#282c34"
+        color: "#282c34",
+        marginTop: "30px",
+        marginBottom: "30px"
     }
 
     // States
@@ -42,7 +44,9 @@ const Counter = () => {
     }
     return (
         <>
-            <h2> The count is : </h2>
+            <h2>Counter Component</h2>
+            <br/>
+            <h3> The count is : </h3>
             <h1 style={resultBoxFormatting}>{count}</h1>
             <div style={buttonGroupStyling}>
                 <button style={buttonStyling} onClick={handleIncrement}
