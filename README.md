@@ -1,3 +1,8 @@
+# NOTES:
+## Basics
+1) Package-lock.json stores all the versions of the dependencies and sub dependensies so if you want to install latest version of the dependensies following the rules set in package.json delete the package-lock.json and run `npm install` again 
+2) If you run npm install without package-lock-json it will update the version to the latest compatable version but of you have package-lock.json it will lock it to that version 
+   
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
