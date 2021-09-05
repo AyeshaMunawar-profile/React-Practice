@@ -1,18 +1,10 @@
 import {useEffect, useState} from "react";
+import PostItem from "../PostItem/PostItem";
 
 type postPropsType = {
     appName: string
 }
 const Posts = ({appName}: postPropsType) => {
-    // Styling
-    const postStyling =
-        {
-            margin: "50px 20px",
-            backgroundColor: "lavenderblush",
-            color: "black",
-            padding: "20px 30px",
-        }
-
     const [posts, setPosts] = useState<any[]>([]);
     useEffect(() => {
         fetch('https://jsonplaceholder.typicode.com/posts')
@@ -22,20 +14,12 @@ const Posts = ({appName}: postPropsType) => {
     }, [])
     return (
         <>
-            <br/>
-            <br/>
-            <h2> Past Posts on {appName} </h2>
-            {console.log(posts)}
+            <h1 style={{margin: "80px 20px"}}> Past Posts on {appName} </h1>
             {posts && posts.map((post, index) => {
                 console.log(post, index);
+                const {userId, id, title, body} = post;
                 return (
-                    <div key={`facebook-post-${index}`} style={postStyling}>
-                        <h3>Post No : {index}</h3>
-                        <h4>ID : {post?.id}</h4>
-                        <h4>User Id : {post?.userId}</h4>
-                        <h4>Title : {post?.title}</h4>
-                        <h4>Post : {post?.body}</h4>
-                    </div>
+                    <PostItem postNo={index} userId={userId} id={id} title={title} body={body}/>
                 )
             })}
         </>
