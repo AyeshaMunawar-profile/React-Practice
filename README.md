@@ -1,4 +1,6 @@
 # NOTES:
+Sample data got from : [jsonplaceholder.typicode.com](https://jsonplaceholder.typicode.com/)
+
 ## Basics
 1) _**Package-lock.json**_ stores all the versions of the dependencies and sub dependencies so if you want to install the latest version of the dependencies following the rules set in package.json delete the package-lock.json and run `npm install` again 
 2) If you run npm install without package-lock-json it will update the version to the latest compatable version but of you have package-lock.json it will lock it to that version 
