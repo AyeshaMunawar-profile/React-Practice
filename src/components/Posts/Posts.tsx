@@ -14,14 +14,16 @@ const Posts = ({appName}: postPropsType) => {
     }, [])
     return (
         <>
-            <h1 style={{margin: "80px 20px"}}> Past Posts on {appName} </h1>
-            {posts && posts.map((post, index) => {
-                console.log(post, index);
-                const {userId, id, title, body} = post;
-                return (
-                    <PostItem postNo={index} userId={userId} id={id} title={title} body={body}/>
-                )
-            })}
+            {posts && posts.length>0 ?
+                <>
+                    <h1 style={{margin: "80px 20px"}}> Past Posts on {appName} </h1>
+                    {posts && posts.map((post, index) => {
+                        return (
+                            <PostItem {...post} postNo={index} />
+                        )
+                    })}
+                </> : <h1>Loading ...</h1>}
+
         </>
     )
 }
