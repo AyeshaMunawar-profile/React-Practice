@@ -11,8 +11,27 @@ Sample data got from : [jsonplaceholder.typicode.com](https://jsonplaceholder.ty
    
 ## Props
  1) Prop is a variable that a component can pass to its children components 
- 2) 
+ 2) You can use destructuring in the component and can also rename the props name in that component eg. `const {name: fullName}= props`
+ 3) You can provide props to a component using spread operator `<component {...props} />`
+ 4) You can use map to loop over an array of elements and return a component for each entry with key passed as a unique value to help react identify it in DOM
 
+## Destructuring & Spread Operator Examples
+1) `[a,b, ...rest] = [10,20,30,40,50,60]`
+2) nested destructuring 
+
+`
+const {
+name, 
+id, 
+address: {zone, streetNo, Province},salary}
+`
+## Maps and loops in JSX
+1) Maps are used to return jsx component for all entries of a iterable data structure 
+2) Map is  a pure function as the output is predictable and same of same input 
+3) Map vs foreach . Foreach has unpredictable output possibility as you cannot return also in certain cases but in map you have to return for every entry 
+4) Map implicit returns an entry for each corresponding entry of an iterable foreach doesn't . map implicitly returns a array of result values foreach doesn't. e.g. 
+   `{employees.map(employee=>{<h1>{employee.name}</h1>})}`
+ Map returns a list of employee jsx elements to be added to the DOM foreach doesn't return it 
 
 # Getting Started with Create React App
 
