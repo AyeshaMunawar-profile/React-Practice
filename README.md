@@ -81,9 +81,13 @@ const { name, id, address: {zone, streetNo, Province},salary}
 7) To run useEffect on mounting use `useEffect(()=>{console.log("use effect ran)},[])`
 8) for component unmount use return a function
    i.e. `useEffect(()=>{console.log("use effect ran) return ()=>{console.log("The component has unmounted")}},[])`
+9) For update just pass the states in the second argument of the use effect so if that state or states change the use effect will run `useEffect(()=>{console.log("use effect ran)},[state1,state2])`
 
 ## UseEffect  & UseEffect with API requests
 1) Use effect can act like all the three component life cycle methods componentDidMount , componentDidUpdate, componentWillUnmount
+2) It's a professional practice t always have the second argument because absence of which will result in running the effect on every possible render and rerender
+3) for a useEffect that return a function but in case of a specific state or states in second argument now it doesn't behaves like a componentWillUnmount but a cleanup function for that specific state or states 
+   i.e. `useEffect(()=>{console.log("use effect ran) return ()=>{console.log("The component has unmounted")}},[state1])` now componentWillUnmount will run everytime sate1 changes. Its will act as a cleanup function it will run right before the state updates and then the update will run again so component updates then cleanup then update again . cleanup function also rus before the component unmounts
 
 # Getting Started with Create React App
 

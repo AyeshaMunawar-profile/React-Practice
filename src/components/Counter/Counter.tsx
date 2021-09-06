@@ -42,17 +42,25 @@ const Counter = () => {
     const handleDecrement = () => {
         setCount(count - 1)
     }
-    // componentDidMount
+    // // componentDidMount
+    // useEffect(() => {
+    //     console.log("Counter Component : Mounted");
+    //     return ()=>{
+    //         // componentWillUnmount
+    //         console.log("Counter component : Unmount")
+    //     }
+    // }, [])
+    // // componentDidUpdate
+    // useEffect(() => {
+    //     console.log("Counter Component : Updated");
+    // }, [count])
+
+    // not componentWillUnmount but a cleanup function for a state used in the second argument
     useEffect(() => {
-        console.log("Counter Component : Mounted");
-        return ()=>{
-            // componentWillUnmount
-            console.log("Counter component : Unmount")
+        console.log("Counter Component : Updated  count value is: ", count);
+        return () => {
+            console.log("Clean Up function for state count ", count);
         }
-    }, [])
-    // componentDidUpdate
-    useEffect(() => {
-        console.log("Counter Component : Updated");
     }, [count])
 
     return (
