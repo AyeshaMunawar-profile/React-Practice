@@ -82,6 +82,9 @@ const { name, id, address: {zone, streetNo, Province},salary}
 8) for component unmount use return a function
    i.e. `useEffect(()=>{console.log("use effect ran) return ()=>{console.log("The component has unmounted")}},[])`
 
+## UseEffect  & UseEffect with API requests
+1) Use effect can act like all the three component life cycle methods componentDidMount , componentDidUpdate, componentWillUnmount
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
