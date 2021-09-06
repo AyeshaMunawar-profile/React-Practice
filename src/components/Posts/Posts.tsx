@@ -17,7 +17,7 @@ const Posts = ({appName}: postPropsType) => {
             {posts && posts.length>0 ?
                 <>
                     <h1 style={{margin: "80px 20px"}}> Past Posts on {appName} </h1>
-                    {posts && posts.map((post, index) => {
+                    {posts && posts.length>=1 && posts.map((post, index) => {
                         return (
                             <PostItem {...post} postNo={index} key={`facebook-post-${index}`}/>
                         )
