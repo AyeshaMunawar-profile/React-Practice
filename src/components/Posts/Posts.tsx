@@ -6,6 +6,7 @@ type postPropsType = {
 }
 const Posts = ({appName}: postPropsType) => {
     const [posts, setPosts] = useState<any[]>([]);
+    // componentDidMount load data only once 
     useEffect(() => {
         fetch('https://jsonplaceholder.typicode.com/posts')
             .then(response => response.json())
