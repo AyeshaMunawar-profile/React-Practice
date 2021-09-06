@@ -42,6 +42,19 @@ const Counter = () => {
     const handleDecrement = () => {
         setCount(count - 1)
     }
+    // componentDidMount
+    useEffect(() => {
+        console.log("Counter Component : Mounted");
+        return ()=>{
+            // componentWillUnmount
+            console.log("Counter component : Unmount")
+        }
+    }, [])
+    // componentDidUpdate
+    useEffect(() => {
+        console.log("Counter Component : Updated");
+    }, [count])
+
     return (
         <>
             <h2>Counter Component</h2>
